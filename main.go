@@ -13,17 +13,10 @@ var history = History{
 
 func main() {
 
-	go SubChina("default", 300)
-
-	go SubProvince("安徽省", "default", 300)
-	go SubProvince("上海市", "default", 300)
-
-	go SubCity("合肥", "default", 300)
-	go SubCity("万州区", "default", 300)
-
-	go SubNews("all", "default", 300)
-	go SubNews("安徽省", "default", 300)
-
-	go SubRumors("default", 300)
+	go SubChina("default", 3600)
+	go SubProvince("安徽省", "default", 1800)
+	go SubCity("合肥", "default", 100)
+	go SubNews("all", "default", 100)
+	go SubRumors("default", 600)
 	select {}
 }
